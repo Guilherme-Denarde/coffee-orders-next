@@ -15,7 +15,7 @@ const produtoSchema = z.object({
 
 type produtoFormData = z.infer<typeof produtoSchema>;
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://https://coffee-orders-43801498060.us-central1.run.app:8080";
 
 export default function ProdutoForm() {
   const queryClient = useQueryClient();
