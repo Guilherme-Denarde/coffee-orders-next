@@ -1,6 +1,6 @@
 import type { Product, Order } from '@/types/index';
 
-const API_URL = "https://coffee-orders-43801498060.us-central1.run.app";
+const API_URL = process.env.NEXT_PUBLIC_API_URL;// || "http://https://coffee-orders-43801498060.us-central1.run.app:8080";
 
 export const fetchProducts = async (): Promise<Product[]> => {
   try {
