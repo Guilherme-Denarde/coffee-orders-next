@@ -54,8 +54,12 @@ export default function ProdutoForm() {
       queryClient.invalidateQueries({ queryKey: ["produtos"] });
       alert("Produto criado com sucesso!");
     },
-    onError: (error: any) => {
-      alert(error.message);
+    onError: (error: unknown) => {
+      if (error instanceof Error) {
+        alert(error.message);
+      } else {
+        alert("Ocorreu um erro inesperado");
+      }
     },
   });
 

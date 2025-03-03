@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-serif;
+}
+
+/* Custom font for the logo */
+.logo-font {
+  @apply font-serif italic;
+}
+
+/* Custom styling for menu items */
+.menu-category {
+  @apply border-b-2 border-[#b8aa8e] pb-1 mb-6 inline-block;
+}
+
+/* Responsive container for product grid */
+.product-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6;
+}
+
+/* Custom button styling */
+.btn-primary {
+  @apply bg-[#b8aa8e] hover:bg-[#a29681] text-white py-2 px-4 rounded transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 px-4 rounded transition-colors;
+}
+
+/* Custom status badge styling */
+.status-badge {
+  @apply px-2 py-1 rounded-full text-xs;
+}
+
+/* Custom form styling */
+.form-input {
+  @apply w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#b8aa8e];
+}
+
+.form-label {
+  @apply block text-gray-700 font-medium mb-2;
+}
