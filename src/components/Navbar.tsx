@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import Link from "next/link";
 import { useCart } from "../context/CartContext";
@@ -29,10 +31,11 @@ const Navbar = () => {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link href="/" className="hover:text-white">HOME</Link>
+          <Link href="/menu" className="hover:text-white">MENU</Link>
           
           {/* Public routes */}
           <Link href="/products" className="hover:text-white">PRODUCTS</Link>
+          <Link href="/orders" className="hover:text-white">ORDERS</Link>
           <Link href="https://github.com/Guilherme-Denarde" className="hover:text-white">CONTACT</Link>
           
           {/* Auth-dependent routes */}
@@ -40,7 +43,7 @@ const Navbar = () => {
             <>
               <Link href="/orders" className="hover:text-white">ORDERS</Link>
               {user.isCoffeeMaker && (
-                <Link href="/admin/products" className="hover:text-white">MANAGE PRODUCTS</Link>
+                <Link href="/products" className="hover:text-white">MANAGE PRODUCTS</Link>
               )}
             </>
           )}
@@ -86,7 +89,7 @@ const Navbar = () => {
         {menuOpen && (
           <div className="md:hidden absolute top-16 left-0 right-0 bg-[#b8aa8e] shadow-lg z-10">
             <div className="flex flex-col p-4 space-y-4">
-              <Link href="/" className="hover:text-white">HOME</Link>
+              <Link href="/menu" className="hover:text-white">MENU</Link>
               <Link href="/products" className="hover:text-white">PRODUCTS</Link>
               <Link href="https://github.com/Guilherme-Denarde" className="hover:text-white">CONTACT</Link>
               
@@ -94,7 +97,7 @@ const Navbar = () => {
                 <>
                   <Link href="/orders" className="hover:text-white">ORDERS</Link>
                   {user.isCoffeeMaker && (
-                    <Link href="/admin/products" className="hover:text-white">MANAGE PRODUCTS</Link>
+                    <Link href="/products" className="hover:text-white">MANAGE PRODUCTS</Link>
                   )}
                 </>
               )}

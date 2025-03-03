@@ -1,11 +1,18 @@
+import { Timestamp } from "firebase/firestore";
+
 export interface Product {
-    id: string;
-    name: string;
-    price: number;
-    image: string;
-    description?: string;
-    category: string;
-  }
+  id: string;
+  name: string;
+  description?: string;
+  price: number;
+  category?: string;
+  imageUrl?: string;
+  inStock?: boolean;
+  image?: string;
+  createdAt?: Timestamp | null;  
+  updatedAt?: Timestamp | null;
+}
+
   
   export interface CartItem {
     product: Product;
